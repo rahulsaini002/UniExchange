@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniexchange</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+</head>
+<body> 
+    
+    <header>
+
+        <img id="pic" src="images/logofinall.png" accept="image/jpeg" alt="">
+        <div id="search-container">
+          <input type="search" id="search-input" placeholder="Search Product Name Here!..." />
+          <img id="search" src="images/search_btn.svg" alt="">
+        </div>
+        <select id="Language" name="lang">
+          <option value=""  selected>English</option>
+          <option value="A">Hindi</option>
+        </select>
+          {{!-- <img src="images/svgchat.svg" class="newsvg"> --}}
+          <img src="images/acc.svg" class="newsvg" id="accbtn" alt="">
+          <button class="sell-button" id="sellBtn">+SELL</button>
+          <a href="http://localhost:3000/" class="logout-button">Logout</a>
+          
+    </header>
+
+     <div class="sellItem">
+                {{!-- <img src="images/drow.svg" id="dropDown"> --}}
+              <div class="add-product-form">
+                  <select id="Category" name="category" required>
+                    <option value="" disabled selected>Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Vehicles">Vehicles</option>
+                    <option value="Academics">Academics</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                  </select>
+                  <input type="text" id="productName" placeholder="Product Name" required >
+                  <input type="number" id="productPrice" placeholder="Price (Rs)" required>
+                  {{!-- <input type="number" id="productPrice" placeholder="Price (Rs)" required > --}}
+                  {{!-- <input type="text" id="productDescription" placeholder="Product Description"> --}}
+                  <textarea id="productDescription" placeholder="Product Description" rows="4" required maxlength="100" ></textarea>
+                  {{!-- <input type="file" id="productImage" accept="image/png,image/jpeg"> --}}
+                  <input type="file" id="productImage" accept="image/png,image/jpeg" class="custom-file-input">
+                  {{!-- <input type="file" id="productImage" placeholder="Add Image"  required > --}}
+                  <button id="addProductButton">Add Products</button>
+                  {{!-- <button id="addProductButton" onclick="addProduct(event)">Add Product</button> --}}
+              </div>
+          </div>
+
+
+   <div class="priceFilter">
+     <label for="price"> Filter by Price: </label>
+       <select id="price" name="Price Filters"  required>
+              <option value="0-Infinity"  selected>All</option>
+              <option value="0-1000" >0-1000</option>
+              <option value="1000-5000">1000-5000</option>
+              <option value="5000-10000">5000-10000</option>
+              <option value="10000-Infinity">10000+</option>
+        </select>
+  </div>
+
+   <div class="wrapper">
+    
+        <div class="buttons">
+          <button class="button-value" id="All" onclick="filterProductByType('all')">All</button>
+          <button class="button-value" id="Vehicles" onclick="filterProductByType('Vehicles')">
+            Vehicles
+          </button>
+          <button class="button-value" id="Electronics" onclick="filterProductByType('Electronics')">
+            Electronics
+          </button>
+          <button class="button-value" id="Academics" onclick="filterProductByType('Academics')">
+            Academics
+          </button>
+          <button class="button-value" id="Sports" onclick="filterProductByType('Sports')">
+            Sports
+          </button>
+          <button class="button-value"  id="Miscellaneous"onclick="filterProductByType('Miscellaneous')">
+            Miscellaneous
+          </button>
+        </div>
+        <hr>
+</div>
+   <div id="products"></div>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="owner-info">
+            <h3>Owner: <br><br> Yash Kumar</h3>
+            <h3> Surbhi</h3>
+            <h3> Mayank</h3>
+            <p>Contact: 8369843496</p>
+            <p>Email: yashkumarhoppkins@gmail.com</p>
+
+        </div>
+        <div class="social-media">
+            <h3><u>Follow us on:</u> </h3>
+            <a href="https://www.instagram.com/y.a.s.h__k.u.m.a.r__/" target="_blank" title="Instagram">
+          
+                <img src="images/instaa.png" alt="Instagram">
+            </a>
+            {{!-- <a href="https://www.youtube.com/channel/UCb3CFGx8isxzyp4iVY1ZL2Q" target="_blank" title="YouTube">
+                <img src="images/youtubee.jpg" alt="YouTube">
+            </a> --}}
+        </div>
+    </div>
+</footer>
+</section>
+
+<script src="/javascripts/products.js"></script>
+
+</body>
+</html>

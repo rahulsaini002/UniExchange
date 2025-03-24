@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thaparex - College Exchange Portal</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+ 
+<body>
+    <header>
+        <h1 id="one">WELCOME   &nbsp  TO  &nbsp  THAPAREX - <br> College Exchange Portal</h1>
+        <h2 id="one">Buy and Sell Items Within Your College Community</h2>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="search()">Search</button>
+    </div>
+    <nav>
+        <a href="electronics.html">Electronics</a>
+        <a href="sports.html">Sports & Fitness Equipment</a>
+        <a href="#study">Study Materials</a>
+        <a href="#vehicles">Vehicles</a>
+        <a href="#miscellaneous">Miscellaneous</a>
+    </nav>
+
+
+
+    <section id="electronics" class="category">
+        <h2>Electronics</h2>
+        <div class="add-product-form">
+            <input type="text" id="productName" placeholder="Product Name">
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+        <div class="subcategory">
+            <fieldset>
+
+           
+            <h3>Laptops</h3>
+            <fieldset>
+            <div class="product-container">
+                <!-- Product Listing for Laptops -->
+                <div class="product">
+                    <img src="laptop1.jpeg" alt="Laptop" >
+                   <!-- Update the link for each laptop -->
+        <a href="reviews.html" class="product-link" data-product="laptop1">
+                <p>Click Here</p>
+            </a>
+                  
+                    <p>Description: Powerful laptop for all your computing needs.</p>
+                    <p>Price: $800</p>
+                    <p>Seller: John Doe</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">New Functionality</button>
+                </div>
+                <!-- Additional Laptop Images -->
+                <div class="product">
+                    <img src="laptop2_177x236_1_50.jpeg" alt="Laptop 2">
+                    <p>Description: Additional laptop description.</p>
+                    <p>Price: $900</p>
+                    <p>Seller: Jane Smith</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">New Functionality</button>&nbsp
+                </div> &nbsp
+                &nbsp
+                
+                <div class="product">
+                    <img src="laptop3_177x236.jpeg" alt="Laptop 3">
+                    <p>Description: Another additional laptop description.</p>
+                    <p>Price: $950</p>
+                    <p>Seller: Mike Johnson</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">New Functionality</button>
+                </div>
+                <div class="product">
+                    <img src="laptop4_177x236.jpeg" alt="Laptop 4">
+                    <p>Description: Yet another additional laptop description.</p>
+                    <p>Price: $850</p>
+                    <p>Seller: Emily Brown</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">New Functionality</button>
+                </div>
+                <div class="product">
+                    <img src="laptop5.jpeg" alt="Laptop 5">
+                    <p>Description: Final additional laptop description.</p>
+                    <p>Price: $920</p>
+                    <p>Seller: Mark Taylor</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">New Functionality</button>
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+    </section>
+    
+
+    <div class="subcategory">
+        <h3>Smartphones</h3>
+        <!-- Product Listing for Smartphones -->
+        <div class="product">
+            <img src="smartphone_image.jpg" alt="Smartphone">
+            <p>Description: High-performance smartphone with advanced features.</p>
+            <p>Price: $500</p>
+            <p>Seller: Jane Smith</p>
+            <button class="btn">Add to Cart</button>
+            <button class="btn">New Functionality</button>
+        </div>
+        <!-- Additional Smartphone Images -->
+        <img src="smartphone_image_2.jpg" alt="Smartphone 2">
+        <img src="smartphone_image_3.jpg" alt="Smartphone 3">
+        <img src="smartphone_image_4.jpg" alt="Smartphone 4">
+        <img src="smartphone_image_5.jpg" alt="Smartphone 5">
+    </div>
+
+    <div class="subcategory">
+        <h3>Tablets</h3>
+        <!-- Product Listing for Tablets -->
+        <div class="product">
+            <img src="tablet_image.jpg" alt="Tablet">
+            <p>Description: Lightweight and portable tablet for on-the-go productivity.</p>
+            <p>Price: $300</p>
+            <p>Seller: Mike Johnson</p>
+            <button class="btn">Add to Cart</button>
+            <button class="btn">New Functionality</button>
+        </div>
+        <!-- Additional Tablet Images -->
+        <img src="tablet_image_2.jpg" alt="Tablet 2">
+        <img src="tablet_image_3.jpg" alt="Tablet 3">
+        <img src="tablet_image_4.jpg" alt="Tablet 4">
+        <img src="tablet_image_5.jpg" alt="Tablet 5">
+    </div>
+
+    <div class="subcategory">
+        <h3>Headphones</h3>
+        <!-- Product Listing for Headphones -->
+        <div class="product">
+            <img src="headphones_image.jpg" alt="Headphones">
+            <p>Description: Over-ear headphones with immersive sound quality.</p>
+            <p>Price: $100</p>
+            <p>Seller: Emily Brown</p>
+            <button class="btn">Add to Cart</button>
+            <button class="btn">New Functionality</button>
+        </div>
+        <!-- Additional Headphones Images -->
+        <img src="headphones_image_2.jpg" alt="Headphones 2">
+        <img src="headphones_image_3.jpg" alt="Headphones 3">
+        <img src="headphones_image_4.jpg" alt="Headphones 4">
+        <img src="headphones_image_5.jpg" alt="Headphones 5">
+    </div>
+</section>
+</fieldset>
+<footer>
+    <div class="footer-container">
+        <div class="owner-info">
+            <h3>Owner: Yash Kumar</h3>
+            <p>Contact: 8369843496</p>
+            <p>Email: yashkumarhoppkins@gmail.com</p>
+        </div>
+        <div class="social-media">
+            <h3>Follow us on:</h3>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <img src="instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" title="YouTube">
+                <img src="youtube-icon.png" alt="YouTube">
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+
+<script>
+
+    function addProduct() {
+    const productName = document.getElementById('productName').value;
+    // Make an AJAX POST request to your backend server to add the product
+    fetch('/products/add', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name: productName })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Product added successfully');
+        } else {
+            alert('Failed to add product');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to add product');
+    });
+}
+
+// Function to remove a product
+function removeProduct(productId) {
+    // Make an AJAX DELETE request to your backend server to remove the product
+    fetch(/products/remove/${productId}, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Product removed successfully');
+        } else {
+            alert('Failed to remove product');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to remove product');
+    });
+}
+</script>
+
+
+</html>

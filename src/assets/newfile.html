@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .add-product-form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input, button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="add-product-form">
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="text" id="productDescription" placeholder="Product Description">
+    <input type="file" id="productImage" accept="image/*">
+    <button onclick="addProduct()">Add Product</button>
+</div>
+
+<ul id="productList"></ul>
+
+<script>
+    function addProduct() {
+        const productName = document.getElementById('productName').value;
+        const productDescription = document.getElementById('productDescription').value;
+        const productImageInput = document.getElementById('productImage');
+        const productImage = productImageInput.files[0]; // Get the selected image file
+
+        // Update the UI with the added product
+        updateProductList(productName, productDescription, productImage);
+
+        // Optional: You can clear the input fields after adding the product
+        document.getElementById('productName').value = "";
+        document.getElementById('productDescription').value = "";
+        productImageInput.value = ""; // Clear the file input
+    }
+
+    function updateProductList(name, description, image) {
+        // Create a new list item
+        const listItem = document.createElement('li');
+
+        // Create elements for name and description
+        const nameElement = document.createElement('p');
+        nameElement.textContent = `Name: ${name}`;
+        listItem.appendChild(nameElement);
+
+        const descriptionElement = document.createElement('p');
+        descriptionElement.textContent = `Description: ${description}`;
+        listItem.appendChild(descriptionElement);
+
+        // Create an image element
+        if (image) {
+            const imageElement = document.createElement('img');
+            imageElement.src = URL.createObjectURL(image);
+            imageElement.alt = 'Product Image';
+            listItem.appendChild(imageElement);
+        }
+
+        // Append the new item to the product list
+        document.getElementById('productList').appendChild(listItem);
+    }
+</script>
+
+</body>
+</html>

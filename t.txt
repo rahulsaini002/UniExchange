@@ -1,0 +1,7 @@
+Feature: 
+Wishlist: If the searched product is not present, in the database, a wishlist button with should appear .
+Now the searched item's name would be stored in the database, with the email of the user and date of query;
+Next, add an event listener on the added products ; such that on adding a new product of the same title as of the query 
+that user gets an email notification about the same;
+
+if Email daaldi of the seller at the back page of each product then communication is easy

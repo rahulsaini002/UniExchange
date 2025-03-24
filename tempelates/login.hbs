@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Uniexchange</title>
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+</head>
+
+<body>
+    <h2 style="margin-top: 100px;">Welcome to UniExchange</h1>
+    <img src="images/logofinall.png" alt="" style="height: 137px;width:185px;">
+    
+    <!-- <div><a href="indexroute.html"><img src="logobes.png" alt="" style="height: 200px;width: 200px; margin-top: -100px;"></a></div> -->
+    <div class="container" id="container" style="margin-bottom: 50px;">
+        <div class="form-container sign-up">
+            <form action="/signup" method="post" >
+                <h1>Create Account</h1>         
+                <input id="FullName" name="name" placeholder="Name" pattern="[A-Za-z\s]{1,50}" title="Wrong input Name" type="text" >
+                <input  id="RegEmail" name="email" placeholder="Email" pattern="^[^@]+@(thapar\.edu)$" title="Email format incorrect" type="email" required>
+                
+                <input type="text" id="rollno" name="rno" placeholder="Roll No" required>
+                
+                <input type="tel" id="phone" name="pno" pattern="[0-9]{10}"  placeholder="Phone No"required>
+
+                <select id="department" name="department" required>
+                    <option value="" disabled selected>Your Branch</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="ME">ME</option>
+                </select>
+                
+               <select id="hostel" name="hostel" required>
+                    <option value="" disabled selected>Your Hostel</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+                
+                 {{!-- <input type="password" id="regpass" name="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()-+=^]).{8,15}$ title="Password format incorrect" required> --}}
+                 <input type="password" id="regpass" name="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()-+=^]).{8,15}$" title="Password format incorrect" required>
+
+                {{!-- <input type="password" name="password" id="regpass" placeholder="Password"> --}}
+
+               {{!-- pattern="^[a-zA-Z0-9]{8,}$" --}}
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+
+                <button id="SignUp" >Sign Up</button>
+            </form>
+
+        </div>
+        {{!-- LOGIN FORM --}}
+        <div class="form-container sign-in">   
+            <form action="/login" method="post">
+                <h1 id="SignIn">Sign In</h1>
+                <span>or use your email password</span>
+                <input placeholder="Name" name="name" type="text" id="FullName1">
+                <input type="email" placeholder="Email" id="Inmail" name:"email"  >
+                {{!-- <input type="password" placeholder="Password" id="InPass"> --}}
+                <input placeholder="Password" name="password" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()-+=^]).{8,15}$" required title="Password must meet the specified criteria"  id="InPass">
+                {{!-- Here we due to some reason the pattern is omitted _____ --}}
+                <a href="#">Forget Your Password?</a>
+                <button id="signIn">Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="hidden" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script> 
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+</script>
+</html>
